@@ -21,6 +21,16 @@ export const Post = () => {
                     <p>Veniam adipisci aspernatur numquam atque cupiditate doloribus ipsa optio error necessitatibus</p> 
                     <p>itaque rem, ex, iure earum consequatur possimus quia!</p>
             </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+
+                <textarea placeholder='Deixe um comentário'/>
+
+            <footer>
+                <button type='submit'>Publicar</button>
+            </footer>
+            </form>
              
         </article>
     )
