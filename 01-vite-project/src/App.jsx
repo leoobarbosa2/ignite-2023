@@ -9,7 +9,6 @@ function App() {
     <Header />
     <div className={styles.wrapper}>
       <Sidebar />
-
       <main>
       <Post />
       <Post />

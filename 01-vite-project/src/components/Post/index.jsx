@@ -1,12 +1,13 @@
-import { Comment } from '../index'
-import * as styles from './Post.module.css'
+import { Comment } from '../index';
+import * as styles from './Post.module.css';
+import { Avatar } from '@Components/index';
 
 export const Post = () => {
     return (
         <article className={styles.post}>
             <header className={styles.postHeader}>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://avatars.githubusercontent.com/u/54908803?v=4"/>
+                    <Avatar src="https://avatars.githubusercontent.com/u/54908803?v=4"/>
                     <div className={styles.authorInfo}>
                         <strong>Leonardo Barbosa</strong>
                         <span>Web Developer</span>

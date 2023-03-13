@@ -4,11 +4,6 @@
     gap: 1rem;
 }
 
-.comment > img {
-    width: 3rem; 
-    height: 3rem; 
-}
-
 .commentBox {
     flex: 1;
 }
@@ -60,7 +55,6 @@
 }
 
 .commentBox footer button{
-    
     background-color: transparent;
     border: 0;
     color: var(--gray-400);
