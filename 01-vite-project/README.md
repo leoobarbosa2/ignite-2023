@@ -12,7 +12,7 @@ It was built using
 - React.js https://pt-br.reactjs.org/
 - Typescript https://www.typescriptlang.org/
 - Date-fns https://date-fns.org/
-- Phosphor-react https://www.google.com/search?q=phosfor-react&oq=phos&aqs=chrome.0.69i59j69i57j0i512l4j69i60l2.709j0j4&sourceid=chrome&ie=UTF-8
+- Phosphor-react https://phosphoricons.com/
 
 #### Showroom
 
