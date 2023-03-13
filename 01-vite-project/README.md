@@ -1,8 +1,18 @@
-### Ignite 2013. 
+### Ignite 2023. 
 
-Project 01.
+First Rocketseat project from Ignite 2023.
 
 #### Ignite Feed application
+
+It is a basic application that simulates a feed with Fake data. 
+
+It was built using
+
+- Vite https://vitejs.dev/
+- React.js https://pt-br.reactjs.org/
+- Typescript https://www.typescriptlang.org/
+- Date-fns https://date-fns.org/
+- Phosphor-react https://www.google.com/search?q=phosfor-react&oq=phos&aqs=chrome.0.69i59j69i57j0i512l4j69i60l2.709j0j4&sourceid=chrome&ie=UTF-8
 
 #### Showroom
 
