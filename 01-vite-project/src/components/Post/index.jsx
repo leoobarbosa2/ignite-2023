@@ -33,7 +33,7 @@ export const Post = ({
     function deleteComment(comment) {
         const updatedCommentList = comments.filter(item => item !== comment);
 
-        setComments(newCommentList)
+        setComments(updatedCommentList)
     }
 
     function handleNewInvalidComment() {

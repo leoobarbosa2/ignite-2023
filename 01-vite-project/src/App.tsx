@@ -1,7 +1,6 @@
 import { Header, Sidebar, Post } from "@Components/index"
-
-import './global.css';
 import styles from './App.module.css';
+import './global.css';
 
 const posts = [
   {
