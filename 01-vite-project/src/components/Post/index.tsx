@@ -12,29 +12,32 @@ type Author =  {
 }
 
 type Content = {
-    type: string;
+    type: 'paragraph' | 'link';
     content: string;
 }
 
-interface PostProps {
+export type PostType = {
+    id: number;
     author: Author;
     content: Content[];
     publishedAt: Date;
 }
 
+interface PostProps {
+    post: PostType;
+}
+
 export const Post = ({ 
-    author,
-    content,
-    publishedAt
+    post
  }: PostProps) => {
     const [newCommentText, setNewCommentText] = useState('');
     const [comments, setComments] = useState(['Post maneiro']);
 
-    const formattedPublishedDate = format(publishedAt, "d 'de' LLLL 'as' HH:mm'h'", {
+    const formattedPublishedDate = format(post.publishedAt, "d 'de' LLLL 'as' HH:mm'h'", {
         locale: ptBR
     })
 
-    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+    const publishedDateRelativeToNow = formatDistanceToNow(post.publishedAt, {
         locale: ptBR,
         addSuffix: true
     })
@@ -63,20 +66,20 @@ export const Post = ({
         <article className={styles.post}>
             <header className={styles.postHeader}>
                 <div className={styles.author}>
-                    <Avatar src={author.avatarUrl}/>
+                    <Avatar src={post.author.avatarUrl}/>
                     <div className={styles.authorInfo}>
-                        <strong>{author.name}</strong>
-                        <span>{author.role}</span>
+                        <strong>{post.author.name}</strong>
+                        <span>{post.author.role}</span>
                     </div>
                 </div>
 
-                <time title={formattedPublishedDate} dateTime={publishedAt.toISOString()}>
+                <time title={formattedPublishedDate} dateTime={post.publishedAt.toISOString()}>
                     {publishedDateRelativeToNow}
                 </time>
             </header>
 
             <div className={styles.content}>
-                {content.map(item => {
+                {post.content.map(item => {
                     if(item.type === 'paragraph') {
                         return (
                             <p key={item.content}>{item.content}</p>

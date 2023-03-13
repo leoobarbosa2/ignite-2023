@@ -2,7 +2,9 @@ import { Header, Sidebar, Post } from "@Components/index"
 import styles from './App.module.css';
 import './global.css';
 
-const posts = [
+import { PostType } from '@Components/Post';
+
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -60,9 +62,7 @@ function App() {
         {posts.map(post => (
           <Post
             key={post.id}
-            author={post.author}
-            content={post.content}
-            publishedAt={(post.publishedAt)}
+            post={post}
           />
         ))}
       </main>
